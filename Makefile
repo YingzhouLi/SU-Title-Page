@@ -3,6 +3,8 @@ name=sutitle
 $(name).pdf: $(name).tex
 
 	pdflatex $(name)
+	bibtex $(name)
+	pdflatex $(name)
 	pdflatex $(name)
 
 clean:
